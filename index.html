@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <title>Projekt1 TI Jakub Kraśniak</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+        <header>
+            <h1 style = "font-size: 50px;">Całkowanie metodą prostokątów</h1>
+        </header>
+    
+        <nav>
+            <input type = "button" class = "przycisk" id = "opisButton" value = "Opis metody" onclick="opisFun()">
+            <input type = "button" class = "przycisk" id = "visButton" value = "Wizualizacja" onclick="visFun()">
+        </nav>
+    
+        <article>
+            <div id = "nawig" class = "content" style = "display : inline-block;">
+              <canvas id="navCanvas" width="400" height="350"></canvas>
+              <h3 style="color:black;font-size:50px;"> Nawigacja </h3>
+            </div>
+
+            <script>
+              var navCnv = document.getElementById("navCanvas");
+              var navCtx = navCnv.getContext("2d");
+              navCtx.shadowColor = 'black';
+              navCtx.shadowBlur = 10;
+              navCtx.moveTo(200, 300);
+              navCtx.lineTo(225, 300);
+              navCtx.moveTo(225, 300);
+              navCtx.lineTo(225, 150);
+              navCtx.moveTo(225, 150);
+              navCtx.lineTo(250, 150);
+              navCtx.moveTo(250, 150);
+              navCtx.lineTo(200, 50);
+              navCtx.moveTo(200, 50);
+              navCtx.lineTo(150, 150);
+              navCtx.moveTo(150, 150);
+              navCtx.lineTo(175, 150);
+              navCtx.moveTo(175, 150);
+              navCtx.lineTo(175, 300);
+              navCtx.moveTo(175, 300);
+              navCtx.lineTo(200, 300);
+              navCtx.lineWidth = 2;
+              navCtx.strokeStyle = '#006666';
+              navCtx.stroke();
+            </script>
+
+
+
+            <div id = "opis" class = "content" style = "min-height: 650px; ">
+                
+            </div>
+            <div id = "vis" class = "content">
+      
+            </div>
+        </article>
+    
+        <footer>
+            Techniki Internetowe - Projekt "Matematyka, fizyka lub informatyka
+            prezentowana z wykorzystaniem grafiki i animacji." Jakub Kraśniak 2022
+        </footer>
+
+	<script src="index.js"></script>
+  </body>
+</html>
